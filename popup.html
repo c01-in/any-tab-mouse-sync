@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Any Tab Mouse Sync</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+        width: 300px;
+        font: 13px/1.45 "SF Mono", Menlo, Consolas, "PingFang SC", monospace;
+        color: #0b1f35;
+        background: linear-gradient(180deg, #e9f2ff, #f5f9ff);
+      }
+      .wrap {
+        padding: 14px;
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: 14px;
+      }
+      .box {
+        background: #ffffff;
+        border: 1px solid #d7e5fa;
+        border-radius: 12px;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .row {
+        margin: 4px 0;
+      }
+      .status {
+        font-weight: 700;
+      }
+      button {
+        width: 100%;
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        font: inherit;
+        cursor: pointer;
+        margin-top: 8px;
+      }
+      .primary {
+        background: #0b5ed7;
+        color: white;
+      }
+      .danger {
+        background: #dc3545;
+        color: white;
+      }
+      .hint {
+        color: #335;
+        margin-top: 8px;
+        font-size: 12px;
+      }
+      .warn {
+        color: #a52727;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Any Tab Mouse Sync</h1>
+      <div class="box">
+        <div class="row">Current Tab: <span id="tabId">-</span></div>
+        <div class="row">Status: <span id="state" class="status">-</span></div>
+        <div class="row">Synced Tab Count: <span id="count">0</span></div>
+      </div>
+      <div id="warn" class="warn" style="display:none;">
+        This page is not supported (for example, chrome:// pages).
+      </div>
+      <button id="toggleBtn" class="primary">Join Sync</button>
+      <button id="clearBtn" class="danger">Clear All Synced Tabs</button>
+      <p class="hint">Click "Join Sync" once in each of two tabs to enable two-way sync.</p>
+    </div>
+    <script src="./popup.js"></script>
+  </body>
+</html>

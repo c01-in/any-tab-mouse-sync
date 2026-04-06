@@ -1,0 +1,9 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Packaging artifacts
+dist/*.zip
+
+# Optional local logs
+*.log
