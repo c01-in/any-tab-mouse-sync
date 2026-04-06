@@ -1,37 +1,40 @@
-# Privacy Policy - Any Tab Mouse Sync
+# Privacy Policy for Any Tab Mouse Sync
 
-Last updated: 2026-04-06
+Effective date: March 27, 2026
 
-## Summary
+Any Tab Mouse Sync is designed to synchronize mouse and scroll interactions between user-selected browser tabs.
 
-Any Tab Mouse Sync does not collect, sell, or transmit your personal data to external servers.
+## Data Collection
 
-## Data Handling
+- We do not collect, transmit, or sell personal data.
+- We do not use analytics, tracking, advertising SDKs, or remote code execution.
 
-The extension stores only minimal local state in `chrome.storage.local`:
+## Local Data Storage
 
-- joined tab IDs used for sync session state
+- The extension stores minimal local state in Chrome storage (for example, selected synced tab IDs and sync status).
+- This data stays in the user's browser profile and is used only for core functionality.
 
-This data stays on your device inside Chrome extension local storage.
+## Permissions
 
-## Network and Third Parties
+- activeTab: used to grant temporary access to the current tab only after an explicit user action (clicking the extension).
+- tabs: used to identify and manage user-selected tabs for synchronization.
+- scripting: used to ensure content scripts are available in selected tabs when needed.
+- storage: used to save local sync state.
 
-- No analytics SDK
-- No ad SDK
-- No remote database/API for user tracking
-- No data sale or sharing with third parties
+## Data Sharing
 
-## Permissions and Why They Are Needed
+No user data is shared with third parties.
 
-- `activeTab`: interact with the tab where the user activates the extension
-- `tabs`: manage selected synced tabs and handle tab removal
-- `storage`: persist sync membership locally
-- `scripting`: inject the content script into selected tabs
+## Children's Privacy
 
-## Security
+The extension is not directed to children and does not knowingly collect personal data.
 
-The extension only works on supported web pages (`http://` and `https://`), and does not run on Chrome restricted pages such as `chrome://` pages.
+## Changes to This Policy
+
+This policy may be updated from time to time. The latest version will always be available at this URL.
 
 ## Contact
 
-If you find a privacy or security issue, open an issue in this repository.
+Publisher: Colin
+
+Contact email: colinhebe@gmail.com
